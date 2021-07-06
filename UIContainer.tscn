@@ -1,0 +1,696 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://UIContainer.gd" type="Script" id=1]
+[ext_resource path="res://Assets/icons/buttons/btn_left_idle.png" type="Texture" id=2]
+[ext_resource path="res://Assets/icons/buttons/btn_left_hover.png" type="Texture" id=3]
+[ext_resource path="res://Assets/icons/buttons/btn_left_pressed.png" type="Texture" id=4]
+[ext_resource path="res://Assets/icons/buttons/btn_right_hover.png" type="Texture" id=5]
+[ext_resource path="res://Assets/icons/buttons/btn_right_idle.png" type="Texture" id=6]
+[ext_resource path="res://Assets/icons/buttons/btn_right_pressed.png" type="Texture" id=7]
+[ext_resource path="res://Assets/font.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Assets/icons/buttons/pokerus.png" type="Texture" id=9]
+[ext_resource path="res://Assets/icons/items/181.png" type="Texture" id=10]
+
+[node name="UIContainer" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.49835
+margin_bottom = 1.49835
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="UICanvas" type="CanvasLayer" parent="."]
+
+[node name="VBox" type="VBoxContainer" parent="UICanvas"]
+margin_right = 344.0
+margin_bottom = 312.0
+rect_min_size = Vector2( 344, 260 )
+rect_scale = Vector2( 1.125, 1.125 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Panel" parent="UICanvas/VBox"]
+margin_right = 344.0
+margin_bottom = 36.0
+rect_min_size = Vector2( 0, 36 )
+
+[node name="Label" type="Label" parent="UICanvas/VBox/Title"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 36 )
+custom_fonts/font = ExtResource( 8 )
+text = "Glitzer Popping Tool"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hmenu" type="HBoxContainer" parent="UICanvas/VBox"]
+margin_top = 40.0
+margin_right = 344.0
+margin_bottom = 92.0
+custom_constants/separation = 6
+
+[node name="VMenu" type="VBoxContainer" parent="UICanvas/VBox/Hmenu"]
+margin_right = 286.0
+margin_bottom = 52.0
+
+[node name="Hbox" type="HBoxContainer" parent="UICanvas/VBox/Hmenu/VMenu"]
+margin_right = 286.0
+margin_bottom = 24.0
+custom_constants/separation = 2
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Identifier" type="OptionButton" parent="UICanvas/VBox/Hmenu/VMenu/Hbox"]
+margin_right = 90.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 90, 0 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Items" type="OptionButton" parent="UICanvas/VBox/Hmenu/VMenu/Hbox"]
+margin_left = 92.0
+margin_right = 212.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 120, 0 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HexLabel" type="Panel" parent="UICanvas/VBox/Hmenu/VMenu/Hbox"]
+margin_left = 214.0
+margin_right = 244.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 30, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="itemHex" type="Label" parent="UICanvas/VBox/Hmenu/VMenu/Hbox/HexLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Hex"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Hex" type="LineEdit" parent="UICanvas/VBox/Hmenu/VMenu/Hbox"]
+margin_left = 246.0
+margin_right = 286.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 40, 0 )
+custom_colors/clear_button_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+text = "0000"
+align = 1
+editable = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Hbox2" type="HBoxContainer" parent="UICanvas/VBox/Hmenu/VMenu"]
+margin_top = 28.0
+margin_right = 286.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 0, 24 )
+custom_constants/separation = 2
+alignment = 1
+
+[node name="TypeDrop" type="OptionButton" parent="UICanvas/VBox/Hmenu/VMenu/Hbox2"]
+margin_right = 80.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 80, 0 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PokeDrop" type="OptionButton" parent="UICanvas/VBox/Hmenu/VMenu/Hbox2"]
+margin_left = 82.0
+margin_right = 212.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 130, 0 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HexLabel" type="Panel" parent="UICanvas/VBox/Hmenu/VMenu/Hbox2"]
+margin_left = 214.0
+margin_right = 244.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 30, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="itemHex" type="Label" parent="UICanvas/VBox/Hmenu/VMenu/Hbox2/HexLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Hex"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Hex" type="LineEdit" parent="UICanvas/VBox/Hmenu/VMenu/Hbox2"]
+margin_left = 246.0
+margin_right = 286.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 40, 0 )
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+text = "0000"
+align = 1
+editable = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel" type="Panel" parent="UICanvas/VBox/Hmenu"]
+margin_left = 292.0
+margin_right = 344.0
+margin_bottom = 52.0
+size_flags_horizontal = 3
+
+[node name="imgPokemon" type="TextureRect" parent="UICanvas/VBox/Hmenu/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 64, 64 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="imgItem" type="TextureRect" parent="UICanvas/VBox/Hmenu/Panel"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -24.0
+margin_top = -24.0
+rect_min_size = Vector2( 24, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="ColorRect" parent="UICanvas/VBox"]
+margin_top = 96.0
+margin_right = 344.0
+margin_bottom = 304.0
+rect_min_size = Vector2( 0, 208 )
+color = Color( 0.0392157, 0.0392157, 0.0392157, 1 )
+
+[node name="Hbox" type="HBoxContainer" parent="UICanvas/VBox/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+custom_constants/separation = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="P" type="ColorRect" parent="UICanvas/VBox/Panel/Hbox"]
+margin_right = 250.0
+margin_bottom = 192.0
+rect_min_size = Vector2( 250, 192 )
+color = Color( 0.25098, 0.223529, 0.223529, 1 )
+
+[node name="H" type="HBoxContainer" parent="UICanvas/VBox/Panel/Hbox/P"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="V" type="VBoxContainer" parent="UICanvas/VBox/Panel/Hbox/P/H"]
+margin_right = 124.0
+margin_bottom = 184.0
+custom_constants/separation = 1
+
+[node name="G" type="GridContainer" parent="UICanvas/VBox/Panel/Hbox/P/H/V"]
+margin_right = 124.0
+margin_bottom = 104.0
+custom_constants/vseparation = 2
+custom_constants/hseparation = 2
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lb_hp" type="TextureButton" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
+
+[node name="n_hp" type="Panel" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G"]
+margin_left = 26.0
+margin_right = 56.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 30, 0 )
+
+[node name="Name" type="Label" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G/n_hp"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "HP"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="num_hp" type="LineEdit" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G"]
+margin_left = 58.0
+margin_right = 98.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 40, 0 )
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+text = "000"
+align = 1
+editable = false
+
+[node name="rb_hp" type="TextureButton" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G"]
+margin_left = 100.0
+margin_right = 124.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 5 )
+
+[node name="lb_atk" type="TextureButton" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G"]
+margin_top = 26.0
+margin_right = 24.0
+margin_bottom = 50.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
+
+[node name="n_atk" type="Panel" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G"]
+margin_left = 26.0
+margin_top = 26.0
+margin_right = 56.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 30, 0 )
+
+[node name="Name" type="Label" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G/n_atk"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "ATK"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="num_atk" type="LineEdit" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G"]
+margin_left = 58.0
+margin_top = 26.0
+margin_right = 98.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 40, 0 )
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+text = "000"
+align = 1
+editable = false
+
+[node name="rb_atk" type="TextureButton" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G"]
+margin_left = 100.0
+margin_top = 26.0
+margin_right = 124.0
+margin_bottom = 50.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 5 )
+
+[node name="lb_def" type="TextureButton" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G"]
+margin_top = 52.0
+margin_right = 24.0
+margin_bottom = 76.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
+
+[node name="n_def" type="Panel" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G"]
+margin_left = 26.0
+margin_top = 52.0
+margin_right = 56.0
+margin_bottom = 76.0
+rect_min_size = Vector2( 30, 0 )
+
+[node name="Name" type="Label" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G/n_def"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "DEF"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="num_def" type="LineEdit" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G"]
+margin_left = 58.0
+margin_top = 52.0
+margin_right = 98.0
+margin_bottom = 76.0
+rect_min_size = Vector2( 40, 0 )
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+text = "000"
+align = 1
+editable = false
+
+[node name="rb_def" type="TextureButton" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G"]
+margin_left = 100.0
+margin_top = 52.0
+margin_right = 124.0
+margin_bottom = 76.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 5 )
+
+[node name="lb_spe" type="TextureButton" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G"]
+margin_top = 78.0
+margin_right = 24.0
+margin_bottom = 102.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
+
+[node name="n_spe" type="Panel" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G"]
+margin_left = 26.0
+margin_top = 78.0
+margin_right = 56.0
+margin_bottom = 102.0
+rect_min_size = Vector2( 30, 0 )
+
+[node name="Name" type="Label" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G/n_spe"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "SPE"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="num_spe" type="LineEdit" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G"]
+margin_left = 58.0
+margin_top = 78.0
+margin_right = 98.0
+margin_bottom = 102.0
+rect_min_size = Vector2( 40, 0 )
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+text = "000"
+align = 1
+editable = false
+
+[node name="rb_spe" type="TextureButton" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G"]
+margin_left = 100.0
+margin_top = 78.0
+margin_right = 124.0
+margin_bottom = 102.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 5 )
+
+[node name="TextureButton" type="TextureButton" parent="UICanvas/VBox/Panel/Hbox/P/H/V/G"]
+margin_top = 104.0
+margin_right = 24.0
+margin_bottom = 104.0
+
+[node name="Panel" type="Panel" parent="UICanvas/VBox/Panel/Hbox/P/H/V"]
+margin_top = 105.0
+margin_right = 124.0
+margin_bottom = 147.0
+rect_min_size = Vector2( 0, 42 )
+
+[node name="scroll" type="ScrollContainer" parent="UICanvas/VBox/Panel/Hbox/P/H/V/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 3.0
+margin_right = -3.0
+margin_bottom = -3.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="quickSelect" type="HBoxContainer" parent="UICanvas/VBox/Panel/Hbox/P/H/V/Panel/scroll"]
+
+[node name="p2" type="Panel" parent="UICanvas/VBox/Panel/Hbox/P/H/V"]
+margin_top = 148.0
+margin_right = 124.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 0, 32 )
+
+[node name="items" type="HBoxContainer" parent="UICanvas/VBox/Panel/Hbox/P/H/V/p2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_min_size = Vector2( 0, 24 )
+custom_constants/separation = 10
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pkrs" type="Button" parent="UICanvas/VBox/Panel/Hbox/P/H/V/p2/items"]
+margin_left = 5.0
+margin_right = 53.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 48, 24 )
+toggle_mode = true
+icon = ExtResource( 9 )
+expand_icon = true
+
+[node name="brace" type="Button" parent="UICanvas/VBox/Panel/Hbox/P/H/V/p2/items"]
+margin_left = 63.0
+margin_right = 111.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 48, 24 )
+toggle_mode = true
+icon = ExtResource( 10 )
+expand_icon = true
+
+[node name="VBSelect" type="VBoxContainer" parent="UICanvas/VBox/Panel/Hbox/P/H"]
+margin_left = 128.0
+margin_right = 236.0
+margin_bottom = 184.0
+
+[node name="panel" type="ColorRect" parent="UICanvas/VBox/Panel/Hbox/P/H/VBSelect"]
+margin_right = 108.0
+margin_bottom = 156.0
+rect_min_size = Vector2( 108, 156 )
+color = Color( 0.121569, 0.12549, 0.14902, 1 )
+
+[node name="scroll" type="ScrollContainer" parent="UICanvas/VBox/Panel/Hbox/P/H/VBSelect/panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 3.0
+margin_right = -3.0
+margin_bottom = -3.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="grid" type="GridContainer" parent="UICanvas/VBox/Panel/Hbox/P/H/VBSelect/panel/scroll"]
+columns = 2
+
+[node name="btypeMenu" type="OptionButton" parent="UICanvas/VBox/Panel/Hbox/P/H/VBSelect"]
+margin_top = 160.0
+margin_right = 108.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 108, 20 )
+expand_icon = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Vbox" type="VBoxContainer" parent="UICanvas/VBox/Panel/Hbox"]
+margin_left = 256.0
+margin_right = 328.0
+margin_bottom = 192.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EVs" type="LineEdit" parent="UICanvas/VBox/Panel/Hbox/Vbox"]
+margin_right = 72.0
+margin_bottom = 24.0
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+text = "Target EVs"
+align = 1
+editable = false
+
+[node name="Grid" type="GridContainer" parent="UICanvas/VBox/Panel/Hbox/Vbox"]
+margin_top = 28.0
+margin_right = 72.0
+margin_bottom = 192.0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HP" type="LineEdit" parent="UICanvas/VBox/Panel/Hbox/Vbox/Grid"]
+margin_right = 34.0
+margin_bottom = 24.0
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+text = "HP"
+align = 1
+max_length = 4
+editable = false
+
+[node name="mon2" type="LineEdit" parent="UICanvas/VBox/Panel/Hbox/Vbox/Grid"]
+margin_left = 38.0
+margin_right = 72.0
+margin_bottom = 24.0
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+text = "000"
+align = 1
+max_length = 3
+editable = false
+
+[node name="ATK" type="LineEdit" parent="UICanvas/VBox/Panel/Hbox/Vbox/Grid"]
+margin_top = 28.0
+margin_right = 34.0
+margin_bottom = 52.0
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+text = "ATK"
+align = 1
+max_length = 4
+editable = false
+
+[node name="mon1" type="LineEdit" parent="UICanvas/VBox/Panel/Hbox/Vbox/Grid"]
+margin_left = 38.0
+margin_top = 28.0
+margin_right = 72.0
+margin_bottom = 52.0
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+text = "000"
+align = 1
+max_length = 3
+editable = false
+
+[node name="DEF" type="LineEdit" parent="UICanvas/VBox/Panel/Hbox/Vbox/Grid"]
+margin_top = 56.0
+margin_right = 34.0
+margin_bottom = 80.0
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+text = "DEF"
+align = 1
+max_length = 4
+editable = false
+
+[node name="item1" type="LineEdit" parent="UICanvas/VBox/Panel/Hbox/Vbox/Grid"]
+margin_left = 38.0
+margin_top = 56.0
+margin_right = 72.0
+margin_bottom = 80.0
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+text = "000"
+align = 1
+max_length = 3
+editable = false
+
+[node name="SPATK" type="LineEdit" parent="UICanvas/VBox/Panel/Hbox/Vbox/Grid"]
+margin_top = 84.0
+margin_right = 34.0
+margin_bottom = 108.0
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+text = "SPA"
+align = 1
+max_length = 5
+editable = false
+
+[node name="unu1" type="LineEdit" parent="UICanvas/VBox/Panel/Hbox/Vbox/Grid"]
+margin_left = 38.0
+margin_top = 84.0
+margin_right = 72.0
+margin_bottom = 108.0
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+text = "000"
+align = 1
+max_length = 3
+editable = false
+
+[node name="SPDEF" type="LineEdit" parent="UICanvas/VBox/Panel/Hbox/Vbox/Grid"]
+margin_top = 112.0
+margin_right = 34.0
+margin_bottom = 136.0
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+text = "SPD"
+align = 1
+max_length = 4
+editable = false
+
+[node name="unu2" type="LineEdit" parent="UICanvas/VBox/Panel/Hbox/Vbox/Grid"]
+margin_left = 38.0
+margin_top = 112.0
+margin_right = 72.0
+margin_bottom = 136.0
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+text = "000"
+align = 1
+max_length = 3
+editable = false
+
+[node name="SPE" type="LineEdit" parent="UICanvas/VBox/Panel/Hbox/Vbox/Grid"]
+margin_top = 140.0
+margin_right = 34.0
+margin_bottom = 164.0
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+text = "SPE"
+align = 1
+max_length = 4
+editable = false
+
+[node name="item2" type="LineEdit" parent="UICanvas/VBox/Panel/Hbox/Vbox/Grid"]
+margin_left = 38.0
+margin_top = 140.0
+margin_right = 72.0
+margin_bottom = 164.0
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+text = "000"
+align = 1
+max_length = 3
+editable = false
+
+[node name="Center" type="CenterContainer" parent="UICanvas"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
